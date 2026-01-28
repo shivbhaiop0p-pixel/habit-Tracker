@@ -28,6 +28,8 @@
       }
       body {
         transition: background-color 0.3s ease, color 0.3s ease;
+        margin: 0;
+        min-height: 100vh;
       }
       .clean-card {
         transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -46,25 +48,24 @@
       .dark .custom-scrollbar::-webkit-scrollbar-thumb {
         background: #475569;
       }
-      @media print {
-        body { background: white !important; color: black !important; }
-        .print-hidden { display: none !important; }
-        .clean-card { border: 1px solid #000 !important; box-shadow: none !important; background: white !important; }
-      }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "date-fns": "https://esm.sh/date-fns@^4.1.0",
-    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.463.0",
+    "date-fns": "https://esm.sh/date-fns@4.1.0",
     "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
+    "react/": "https://esm.sh/react@^19.2.4/"
   }
 }
 </script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100">
     <div id="root"></div>
+    <!-- This script tag is essential to load the React application -->
+    <script type="module" src="./index.tsx"></script>
 </body>
 </html>
